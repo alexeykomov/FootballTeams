@@ -7,9 +7,10 @@ import { style } from './TeamScreen.styles';
 import { SquadMember, TeamFull } from '../../services/types';
 import { Loader } from '../../components/Loader/Loader';
 import { Flag } from '../../components/Flag/Flag';
+import { MatchesSection } from './MatchesSection/MatchesSection';
 
 interface TeamScreenProps {
-  teamId: string;
+  teamId: number;
 }
 
 export const TeamScreen = ({ teamId }: TeamScreenProps) => {
@@ -37,16 +38,14 @@ export const TeamScreen = ({ teamId }: TeamScreenProps) => {
               <View style={style.flagCont}>
                 <Flag flagName={data.tla} uri={data.crestUrl} />
               </View>
-
               <Text>{data.name}</Text>
             </View>
             <Text style={style.playersHeader}>Players:</Text>
             {data.squad.map((d: SquadMember) => (
-              <View>
-                <Text>{d.name}</Text>
-              </View>
+              <Text>{d.name}</Text>
             ))}
           </View>
+          <MatchesSection teamId={teamId} />
         </ScrollView>
       )}
       {isLoading && !data && <Loader />}

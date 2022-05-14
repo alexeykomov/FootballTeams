@@ -1,0 +1,1282 @@
+{
+  "count": 3,
+  "filters": {},
+  "matches": [
+    {
+      "id": 200030,
+      "competition": {
+        "id": 2000,
+        "name": "FIFA World Cup"
+      },
+      "season": {
+        "id": 1,
+        "startDate": "2018-06-14T17:00:00Z",
+        "endDate": "2018-07-15T17:00:00Z",
+        "currentMatchday": 3,
+        "availableStages": [
+          "GROUP_STAGE"
+        ]
+      },
+      "utcDate": "2018-06-17T15:00:00Z",
+      "status": "FINISHED",
+      "minute": null,
+      "attendance": 78011,
+      "matchday": 1,
+      "stage": "GROUP_STAGE",
+      "group": "Group F",
+      "lastUpdated": "2018-06-22T10:00:02Z",
+      "referees": [
+        {
+          "id": 55970,
+          "name": "Alireza Faghani",
+          "nationality": null
+        },
+        {
+          "id": 55971,
+          "name": "Reza Sokhandan",
+          "nationality": null
+        },
+        {
+          "id": 55972,
+          "name": "Mohammadreza Mansouri",
+          "nationality": null
+        },
+        {
+          "id": 55973,
+          "name": "Mohammed Abdulla Hassan",
+          "nationality": null
+        },
+        {
+          "id": 55974,
+          "name": "Mohamed Ahmed Al Hammadi",
+          "nationality": null
+        },
+        {
+          "id": 11054,
+          "name": "Massimiliano Irrati",
+          "nationality": null
+        },
+        {
+          "id": 55933,
+          "name": "Wilton Sampaio",
+          "nationality": null
+        },
+        {
+          "id": 49528,
+          "name": "Carlos Astroza",
+          "nationality": null
+        },
+        {
+          "id": 55724,
+          "name": "Mark Geiger",
+          "nationality": null
+        }
+      ],
+      "homeTeam": {
+        "id": 759,
+        "name": "Germany",
+        "coach": {
+          "id": 10178,
+          "name": "Joachim Löw",
+          "countryOfBirth": "Germany",
+          "nationality": "Germany"
+        },
+        "captain": {
+          "id": 341,
+          "name": "Manuel Neuer",
+          "shirtNumber": 1
+        },
+        "lineup": [
+          {
+            "id": 347,
+            "name": "Jérôme Boateng",
+            "position": "Defender",
+            "shirtNumber": 17
+          },
+          {
+            "id": 350,
+            "name": "Mats Hummels",
+            "position": "Defender",
+            "shirtNumber": 5
+          },
+          {
+            "id": 3179,
+            "name": "Julian Draxler",
+            "position": "Midfielder",
+            "shirtNumber": 7
+          },
+          {
+            "id": 3187,
+            "name": "Timo Werner",
+            "position": "Attacker",
+            "shirtNumber": 9
+          },
+          {
+            "id": 341,
+            "name": "Manuel Neuer",
+            "position": "Goalkeeper",
+            "shirtNumber": 1
+          },
+          {
+            "id": 47,
+            "name": "Toni Kroos",
+            "position": "Midfielder",
+            "shirtNumber": 8
+          },
+          {
+            "id": 370,
+            "name": "Thomas Müller",
+            "position": "Attacker",
+            "shirtNumber": 13
+          },
+          {
+            "id": 3180,
+            "name": "Mesut Özil",
+            "position": "Midfielder",
+            "shirtNumber": 10
+          },
+          {
+            "id": 2035,
+            "name": "Sami Khedira",
+            "position": "Midfielder",
+            "shirtNumber": 6
+          },
+          {
+            "id": 3178,
+            "name": "Marvin Plattenhardt",
+            "position": "Defender",
+            "shirtNumber": 2
+          },
+          {
+            "id": 359,
+            "name": "Joshua Kimmich",
+            "position": "Midfielder",
+            "shirtNumber": 18
+          }
+        ],
+        "bench": [
+          {
+            "id": 138,
+            "name": "Marco Reus",
+            "position": "Midfielder",
+            "shirtNumber": 11
+          },
+          {
+            "id": 3181,
+            "name": "Leon Goretzka",
+            "position": "Midfielder",
+            "shirtNumber": 14
+          },
+          {
+            "id": 3177,
+            "name": "Antonio Rüdiger",
+            "position": "Defender",
+            "shirtNumber": 16
+          },
+          {
+            "id": 148,
+            "name": "Julian Brandt",
+            "position": "Attacker",
+            "shirtNumber": 20
+          },
+          {
+            "id": 3186,
+            "name": "Mario Gómez",
+            "position": "Attacker",
+            "shirtNumber": 23
+          },
+          {
+            "id": 367,
+            "name": "Sebastian Rudy",
+            "position": "Midfielder",
+            "shirtNumber": 19
+          },
+          {
+            "id": 3176,
+            "name": "Matthias Ginter",
+            "position": "Defender",
+            "shirtNumber": 4
+          },
+          {
+            "id": 3175,
+            "name": "Kevin Trapp",
+            "position": "Goalkeeper",
+            "shirtNumber": 12
+          },
+          {
+            "id": 351,
+            "name": "Niklas Süle",
+            "position": "Defender",
+            "shirtNumber": 15
+          },
+          {
+            "id": 3173,
+            "name": "Marc-André ter Stegen",
+            "position": "Goalkeeper",
+            "shirtNumber": 22
+          },
+          {
+            "id": 3182,
+            "name": "Ilkay Gündogan",
+            "position": "Midfielder",
+            "shirtNumber": 21
+          }
+        ]
+      },
+      "awayTeam": {
+        "id": 769,
+        "name": "Mexico",
+        "coach": {
+          "id": 43766,
+          "name": "Juan Carlos Osorio",
+          "countryOfBirth": "Colombia",
+          "nationality": "Colombia"
+        },
+        "captain": {
+          "id": 16,
+          "name": "Andrés Guardado",
+          "shirtNumber": 18
+        },
+        "lineup": [
+          {
+            "id": 23,
+            "name": "Carlos Vela",
+            "position": "Attacker",
+            "shirtNumber": 11
+          },
+          {
+            "id": 3302,
+            "name": "Javier Hernández",
+            "position": "Attacker",
+            "shirtNumber": 14
+          },
+          {
+            "id": 16,
+            "name": "Andrés Guardado",
+            "position": "Defender",
+            "shirtNumber": 18
+          },
+          {
+            "id": 3285,
+            "name": "Guillermo Ochoa",
+            "position": "Goalkeeper",
+            "shirtNumber": 13
+          },
+          {
+            "id": 3287,
+            "name": "Héctor Moreno",
+            "position": "Defender",
+            "shirtNumber": 15
+          },
+          {
+            "id": 130,
+            "name": "Miguel Layún",
+            "position": "Defender",
+            "shirtNumber": 7
+          },
+          {
+            "id": 3294,
+            "name": "Héctor Herrera",
+            "position": "Midfielder",
+            "shirtNumber": 16
+          },
+          {
+            "id": 3291,
+            "name": "Carlos Salcedo",
+            "position": "Defender",
+            "shirtNumber": 3
+          },
+          {
+            "id": 3290,
+            "name": "Hugo Ayala",
+            "position": "Defender",
+            "shirtNumber": 2
+          },
+          {
+            "id": 3306,
+            "name": "Hirving Lozano",
+            "position": "Attacker",
+            "shirtNumber": 22
+          },
+          {
+            "id": 3298,
+            "name": "Jesús Gallardo",
+            "position": "Midfielder",
+            "shirtNumber": 23
+          }
+        ],
+        "bench": [
+          {
+            "id": 43765,
+            "name": "Giovani dos Santos",
+            "position": "Attacker",
+            "shirtNumber": 10
+          },
+          {
+            "id": 43764,
+            "name": "Jonathan dos Santos",
+            "position": "Midfielder",
+            "shirtNumber": 6
+          },
+          {
+            "id": 3284,
+            "name": "Jesús Corona",
+            "position": "Goalkeeper",
+            "shirtNumber": 1
+          },
+          {
+            "id": 38898,
+            "name": "Rafael Márquez",
+            "position": "Defender",
+            "shirtNumber": 4
+          },
+          {
+            "id": 3286,
+            "name": "Alfredo Talavera",
+            "position": "Goalkeeper",
+            "shirtNumber": 12
+          },
+          {
+            "id": 3303,
+            "name": "Marco Fabián",
+            "position": "Attacker",
+            "shirtNumber": 8
+          },
+          {
+            "id": 3304,
+            "name": "Oribe Peralta",
+            "position": "Attacker",
+            "shirtNumber": 19
+          },
+          {
+            "id": 3305,
+            "name": "Raúl Jiménez",
+            "position": "Attacker",
+            "shirtNumber": 9
+          },
+          {
+            "id": 40004,
+            "name": "Javier Aquino",
+            "position": "Midfielder",
+            "shirtNumber": 20
+          },
+          {
+            "id": 3296,
+            "name": "Jesús Manuel Corona",
+            "position": "Midfielder",
+            "shirtNumber": 17
+          },
+          {
+            "id": 39298,
+            "name": "Érick Gutiérrez",
+            "position": "Midfielder",
+            "shirtNumber": 5
+          },
+          {
+            "id": 3293,
+            "name": "Edson Álvarez",
+            "position": "Defender",
+            "shirtNumber": 21
+          }
+        ]
+      },
+      "score": {
+        "winner": "AWAY_TEAM",
+        "duration": "REGULAR",
+        "halfTime": {
+          "homeTeam": 0,
+          "awayTeam": 1
+        },
+        "fullTime": {
+          "homeTeam": 0,
+          "awayTeam": 1
+        },
+        "extraTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "penalties": {
+          "homeTeam": null,
+          "awayTeam": null
+        }
+      },
+      "goals": [
+        {
+          "minute": 35,
+          "scorer": {
+            "id": 3306,
+            "name": "Hirving Lozano"
+          },
+          "assist": [
+            {
+              "id": 3302,
+              "name": "Javier Hernández"
+            }
+          ]
+        }
+      ],
+      "bookings": [
+        {
+          "minute": 40,
+          "team": {
+            "id": 769,
+            "name": "Mexico"
+          },
+          "player": {
+            "id": 3287,
+            "name": "Héctor Moreno"
+          },
+          "card": "YELLOW_CARD"
+        },
+        {
+          "minute": 83,
+          "team": {
+            "id": 6674,
+            "name": "Germany"
+          },
+          "player": {
+            "id": 370,
+            "name": "Thomas Müller"
+          },
+          "card": "YELLOW_CARD"
+        },
+        {
+          "minute": 83,
+          "team": {
+            "id": 759,
+            "name": "Germany"
+          },
+          "player": {
+            "id": 370,
+            "name": "Thomas Müller"
+          },
+          "card": "YELLOW_CARD"
+        },
+        {
+          "minute": 84,
+          "team": {
+            "id": 6674,
+            "name": "Germany"
+          },
+          "player": {
+            "id": 350,
+            "name": "Mats Hummels"
+          },
+          "card": "YELLOW_CARD"
+        },
+        {
+          "minute": 84,
+          "team": {
+            "id": 759,
+            "name": "Germany"
+          },
+          "player": {
+            "id": 350,
+            "name": "Mats Hummels"
+          },
+          "card": "YELLOW_CARD"
+        },
+        {
+          "minute": 90,
+          "team": {
+            "id": 769,
+            "name": "Mexico"
+          },
+          "player": {
+            "id": 3294,
+            "name": "Héctor Herrera"
+          },
+          "card": "YELLOW_CARD"
+        }
+      ],
+      "substitutions": [
+        {
+          "minute": 58,
+          "team": {
+            "id": 769,
+            "name": "Mexico"
+          },
+          "playerOut": {
+            "id": 23,
+            "name": "Carlos Vela"
+          },
+          "playerIn": {
+            "id": 3293,
+            "name": "Edson Álvarez"
+          }
+        },
+        {
+          "minute": 60,
+          "team": {
+            "id": 6674,
+            "name": "Germany"
+          },
+          "playerOut": {
+            "id": 2035,
+            "name": "Sami Khedira"
+          },
+          "playerIn": {
+            "id": 138,
+            "name": "Marco Reus"
+          }
+        },
+        {
+          "minute": 60,
+          "team": {
+            "id": 759,
+            "name": "Germany"
+          },
+          "playerOut": {
+            "id": 2035,
+            "name": "Sami Khedira"
+          },
+          "playerIn": {
+            "id": 138,
+            "name": "Marco Reus"
+          }
+        },
+        {
+          "minute": 66,
+          "team": {
+            "id": 769,
+            "name": "Mexico"
+          },
+          "playerOut": {
+            "id": 3306,
+            "name": "Hirving Lozano"
+          },
+          "playerIn": {
+            "id": 3305,
+            "name": "Raúl Jiménez"
+          }
+        },
+        {
+          "minute": 73,
+          "team": {
+            "id": 769,
+            "name": "Mexico"
+          },
+          "playerOut": {
+            "id": 16,
+            "name": "Andrés Guardado"
+          },
+          "playerIn": {
+            "id": 38898,
+            "name": "Rafael Márquez"
+          }
+        },
+        {
+          "minute": 79,
+          "team": {
+            "id": 6674,
+            "name": "Germany"
+          },
+          "playerOut": {
+            "id": 3178,
+            "name": "Marvin Plattenhardt"
+          },
+          "playerIn": {
+            "id": 3186,
+            "name": "Mario Gómez"
+          }
+        },
+        {
+          "minute": 79,
+          "team": {
+            "id": 759,
+            "name": "Germany"
+          },
+          "playerOut": {
+            "id": 3178,
+            "name": "Marvin Plattenhardt"
+          },
+          "playerIn": {
+            "id": 3186,
+            "name": "Mario Gómez"
+          }
+        },
+        {
+          "minute": 86,
+          "team": {
+            "id": 6674,
+            "name": "Germany"
+          },
+          "playerOut": {
+            "id": 3187,
+            "name": "Timo Werner"
+          },
+          "playerIn": {
+            "id": 148,
+            "name": "Julian Brandt"
+          }
+        },
+        {
+          "minute": 86,
+          "team": {
+            "id": 759,
+            "name": "Germany"
+          },
+          "playerOut": {
+            "id": 3187,
+            "name": "Timo Werner"
+          },
+          "playerIn": {
+            "id": 148,
+            "name": "Julian Brandt"
+          }
+        }
+      ]
+    },
+    {
+      "id": 200033,
+      "competition": {
+        "id": 2000,
+        "name": "FIFA World Cup"
+      },
+      "season": {
+        "id": 1,
+        "startDate": "2018-06-14T17:00:00Z",
+        "endDate": "2018-07-15T17:00:00Z",
+        "currentMatchday": 3,
+        "availableStages": [
+          "GROUP_STAGE"
+        ]
+      },
+      "utcDate": "2018-06-23T18:00:00Z",
+      "status": "FINISHED",
+      "minute": null,
+      "attendance": 44287,
+      "matchday": 2,
+      "stage": "GROUP_STAGE",
+      "group": "Group F",
+      "lastUpdated": "2018-06-23T23:00:02Z",
+      "referees": [
+        {
+          "id": 43888,
+          "name": "Szymon Marciniak",
+          "nationality": null
+        },
+        {
+          "id": 43889,
+          "name": "Paweł Sokolnicki",
+          "nationality": null
+        },
+        {
+          "id": 43890,
+          "name": "Tomasz Listkiewicz",
+          "nationality": null
+        },
+        {
+          "id": 49525,
+          "name": "Ryūji Satō",
+          "nationality": null
+        },
+        {
+          "id": 55658,
+          "name": "Toru Sagara",
+          "nationality": null
+        }
+      ],
+      "homeTeam": {
+        "id": 759,
+        "name": "Germany",
+        "coach": {
+          "id": 10178,
+          "name": "Joachim Löw",
+          "countryOfBirth": "Germany",
+          "nationality": "Germany"
+        },
+        "captain": {
+          "id": 341,
+          "name": "Manuel Neuer",
+          "shirtNumber": 1
+        },
+        "lineup": [
+          {
+            "id": 347,
+            "name": "Jérôme Boateng",
+            "position": "Defender",
+            "shirtNumber": 17
+          },
+          {
+            "id": 138,
+            "name": "Marco Reus",
+            "position": "Midfielder",
+            "shirtNumber": 11
+          },
+          {
+            "id": 3179,
+            "name": "Julian Draxler",
+            "position": "Midfielder",
+            "shirtNumber": 7
+          },
+          {
+            "id": 3177,
+            "name": "Antonio Rüdiger",
+            "position": "Defender",
+            "shirtNumber": 16
+          },
+          {
+            "id": 3187,
+            "name": "Timo Werner",
+            "position": "Attacker",
+            "shirtNumber": 9
+          },
+          {
+            "id": 341,
+            "name": "Manuel Neuer",
+            "position": "Goalkeeper",
+            "shirtNumber": 1
+          },
+          {
+            "id": 47,
+            "name": "Toni Kroos",
+            "position": "Midfielder",
+            "shirtNumber": 8
+          },
+          {
+            "id": 370,
+            "name": "Thomas Müller",
+            "position": "Attacker",
+            "shirtNumber": 13
+          },
+          {
+            "id": 367,
+            "name": "Sebastian Rudy",
+            "position": "Midfielder",
+            "shirtNumber": 19
+          },
+          {
+            "id": 184,
+            "name": "Jonas Hector",
+            "position": "Defender",
+            "shirtNumber": 3
+          },
+          {
+            "id": 359,
+            "name": "Joshua Kimmich",
+            "position": "Midfielder",
+            "shirtNumber": 18
+          }
+        ],
+        "bench": [
+          {
+            "id": 350,
+            "name": "Mats Hummels",
+            "position": "Defender",
+            "shirtNumber": 5
+          },
+          {
+            "id": 3181,
+            "name": "Leon Goretzka",
+            "position": "Midfielder",
+            "shirtNumber": 14
+          },
+          {
+            "id": 148,
+            "name": "Julian Brandt",
+            "position": "Attacker",
+            "shirtNumber": 20
+          },
+          {
+            "id": 3186,
+            "name": "Mario Gómez",
+            "position": "Attacker",
+            "shirtNumber": 23
+          },
+          {
+            "id": 3180,
+            "name": "Mesut Özil",
+            "position": "Midfielder",
+            "shirtNumber": 10
+          },
+          {
+            "id": 2035,
+            "name": "Sami Khedira",
+            "position": "Midfielder",
+            "shirtNumber": 6
+          },
+          {
+            "id": 3176,
+            "name": "Matthias Ginter",
+            "position": "Defender",
+            "shirtNumber": 4
+          },
+          {
+            "id": 3175,
+            "name": "Kevin Trapp",
+            "position": "Goalkeeper",
+            "shirtNumber": 12
+          },
+          {
+            "id": 351,
+            "name": "Niklas Süle",
+            "position": "Defender",
+            "shirtNumber": 15
+          },
+          {
+            "id": 3173,
+            "name": "Marc-André ter Stegen",
+            "position": "Goalkeeper",
+            "shirtNumber": 22
+          },
+          {
+            "id": 3178,
+            "name": "Marvin Plattenhardt",
+            "position": "Defender",
+            "shirtNumber": 2
+          },
+          {
+            "id": 3182,
+            "name": "Ilkay Gündogan",
+            "position": "Midfielder",
+            "shirtNumber": 21
+          }
+        ]
+      },
+      "awayTeam": {
+        "id": 792,
+        "name": "Sweden",
+        "coach": {
+          "id": 10198,
+          "name": "Janne Andersson",
+          "countryOfBirth": "Sweden",
+          "nationality": "Sweden"
+        },
+        "captain": {
+          "id": 3488,
+          "name": "Andreas Granqvist",
+          "shirtNumber": 4
+        },
+        "lineup": [
+          {
+            "id": 3488,
+            "name": "Andreas Granqvist",
+            "position": "Defender",
+            "shirtNumber": 4
+          },
+          {
+            "id": 3493,
+            "name": "Sebastian Larsson",
+            "position": "Midfielder",
+            "shirtNumber": 7
+          },
+          {
+            "id": 6527,
+            "name": "Albin Ekdal",
+            "position": "Midfielder",
+            "shirtNumber": 8
+          },
+          {
+            "id": 3502,
+            "name": "Ola Toivonen",
+            "position": "Attacker",
+            "shirtNumber": 20
+          },
+          {
+            "id": 3489,
+            "name": "Mikael Lustig",
+            "position": "Defender",
+            "shirtNumber": 2
+          },
+          {
+            "id": 3494,
+            "name": "Emil Forsberg",
+            "position": "Midfielder",
+            "shirtNumber": 10
+          },
+          {
+            "id": 15512,
+            "name": "Robin Olsen",
+            "position": "Goalkeeper",
+            "shirtNumber": 1
+          },
+          {
+            "id": 3499,
+            "name": "Viktor Claesson",
+            "position": "Midfielder",
+            "shirtNumber": 17
+          },
+          {
+            "id": 9445,
+            "name": "Ludwig Augustinsson",
+            "position": "Defender",
+            "shirtNumber": 6
+          },
+          {
+            "id": 3504,
+            "name": "Marcus Berg",
+            "position": "Attacker",
+            "shirtNumber": 9
+          },
+          {
+            "id": 3492,
+            "name": "Victor Nilsson-Lindelöf",
+            "position": "Defender",
+            "shirtNumber": 3
+          }
+        ],
+        "bench": [
+          {
+            "id": 3487,
+            "name": "Martin Olsson",
+            "position": "Defender",
+            "shirtNumber": 5
+          },
+          {
+            "id": 3501,
+            "name": "John Guidetti",
+            "position": "Attacker",
+            "shirtNumber": 11
+          },
+          {
+            "id": 3490,
+            "name": "Pontus Jansson",
+            "position": "Defender",
+            "shirtNumber": 18
+          },
+          {
+            "id": 1871,
+            "name": "Filip Helander",
+            "position": "Defender",
+            "shirtNumber": 14
+          },
+          {
+            "id": 3503,
+            "name": "Isaac Thelin",
+            "position": "Attacker",
+            "shirtNumber": 22
+          },
+          {
+            "id": 2222,
+            "name": "Marcus Rohdén",
+            "position": "Midfielder",
+            "shirtNumber": 19
+          },
+          {
+            "id": 1868,
+            "name": "Emil Krafth",
+            "position": "Defender",
+            "shirtNumber": 16
+          },
+          {
+            "id": 3497,
+            "name": "Gustav Svensson",
+            "position": "Midfielder",
+            "shirtNumber": 13
+          },
+          {
+            "id": 3485,
+            "name": "Karl-Johan Johnsson",
+            "position": "Goalkeeper",
+            "shirtNumber": 12
+          },
+          {
+            "id": 3495,
+            "name": "Jimmy Durmaz",
+            "position": "Midfielder",
+            "shirtNumber": 21
+          },
+          {
+            "id": 3484,
+            "name": "Kristoffer Nordfeldt",
+            "position": "Goalkeeper",
+            "shirtNumber": 23
+          },
+          {
+            "id": 1984,
+            "name": "Oscar Hiljemark",
+            "position": "Midfielder",
+            "shirtNumber": 15
+          }
+        ]
+      },
+      "score": {
+        "winner": "HOME_TEAM",
+        "duration": "REGULAR",
+        "halfTime": {
+          "homeTeam": 0,
+          "awayTeam": 1
+        },
+        "fullTime": {
+          "homeTeam": 2,
+          "awayTeam": 1
+        },
+        "extraTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "penalties": {
+          "homeTeam": null,
+          "awayTeam": null
+        }
+      },
+      "goals": [
+        {
+          "minute": 32,
+          "scorer": {
+            "id": 3502,
+            "name": "Ola Toivonen"
+          },
+          "assist": [
+            {
+              "id": 3499,
+              "name": "Viktor Claesson"
+            }
+          ]
+        },
+        {
+          "minute": 48,
+          "scorer": {
+            "id": 138,
+            "name": "Marco Reus"
+          },
+          "assist": [
+            {
+              "id": 3186,
+              "name": "Mario Gómez"
+            }
+          ]
+        },
+        {
+          "minute": 90,
+          "scorer": {
+            "id": 47,
+            "name": "Toni Kroos"
+          },
+          "assist": [
+            {
+              "id": 138,
+              "name": "Marco Reus"
+            }
+          ]
+        }
+      ],
+      "bookings": [
+        {
+          "minute": 52,
+          "team": {
+            "id": 792,
+            "name": "Sweden"
+          },
+          "player": {
+            "id": 6527,
+            "name": "Albin Ekdal"
+          },
+          "card": "YELLOW_CARD"
+        },
+        {
+          "minute": 71,
+          "team": {
+            "id": 759,
+            "name": "Germany"
+          },
+          "player": {
+            "id": 347,
+            "name": "Jérôme Boateng"
+          },
+          "card": "YELLOW_CARD"
+        },
+        {
+          "minute": 82,
+          "team": {
+            "id": 759,
+            "name": "Germany"
+          },
+          "player": {
+            "id": 347,
+            "name": "Jérôme Boateng"
+          },
+          "card": "YELLOW_RED_CARD"
+        },
+        {
+          "minute": 90,
+          "team": {
+            "id": 792,
+            "name": "Sweden"
+          },
+          "player": {
+            "id": 3493,
+            "name": "Sebastian Larsson"
+          },
+          "card": "YELLOW_CARD"
+        }
+      ],
+      "substitutions": [
+        {
+          "minute": 31,
+          "team": {
+            "id": 759,
+            "name": "Germany"
+          },
+          "playerOut": {
+            "id": 367,
+            "name": "Sebastian Rudy"
+          },
+          "playerIn": {
+            "id": 3182,
+            "name": "Ilkay Gündogan"
+          }
+        },
+        {
+          "minute": 46,
+          "team": {
+            "id": 759,
+            "name": "Germany"
+          },
+          "playerOut": {
+            "id": 3179,
+            "name": "Julian Draxler"
+          },
+          "playerIn": {
+            "id": 3186,
+            "name": "Mario Gómez"
+          }
+        },
+        {
+          "minute": 74,
+          "team": {
+            "id": 792,
+            "name": "Sweden"
+          },
+          "playerOut": {
+            "id": 3499,
+            "name": "Viktor Claesson"
+          },
+          "playerIn": {
+            "id": 3495,
+            "name": "Jimmy Durmaz"
+          }
+        },
+        {
+          "minute": 78,
+          "team": {
+            "id": 792,
+            "name": "Sweden"
+          },
+          "playerOut": {
+            "id": 3502,
+            "name": "Ola Toivonen"
+          },
+          "playerIn": {
+            "id": 3501,
+            "name": "John Guidetti"
+          }
+        },
+        {
+          "minute": 87,
+          "team": {
+            "id": 759,
+            "name": "Germany"
+          },
+          "playerOut": {
+            "id": 184,
+            "name": "Jonas Hector"
+          },
+          "playerIn": {
+            "id": 148,
+            "name": "Julian Brandt"
+          }
+        },
+        {
+          "minute": 90,
+          "team": {
+            "id": 792,
+            "name": "Sweden"
+          },
+          "playerOut": {
+            "id": 3504,
+            "name": "Marcus Berg"
+          },
+          "playerIn": {
+            "id": 3503,
+            "name": "Isaac Thelin"
+          }
+        }
+      ]
+    },
+    {
+      "id": 200034,
+      "competition": {
+        "id": 2000,
+        "name": "FIFA World Cup"
+      },
+      "season": {
+        "id": 1,
+        "startDate": "2018-06-14T17:00:00Z",
+        "endDate": "2018-07-15T17:00:00Z",
+        "currentMatchday": 3,
+        "availableStages": [
+          "GROUP_STAGE"
+        ]
+      },
+      "utcDate": "2018-06-27T14:00:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "attendance": null,
+      "matchday": 3,
+      "stage": "GROUP_STAGE",
+      "group": "Group F",
+      "lastUpdated": "2018-06-22T10:00:03Z",
+      "referees": [],
+      "homeTeam": {
+        "id": 772,
+        "name": "Korea Republic",
+        "coach": {
+          "id": null,
+          "name": null,
+          "countryOfBirth": null,
+          "nationality": null
+        },
+        "captain": {
+          "id": null,
+          "name": null,
+          "shirtNumber": null
+        },
+        "lineup": [],
+        "bench": []
+      },
+      "awayTeam": {
+        "id": 759,
+        "name": "Germany",
+        "coach": {
+          "id": null,
+          "name": null,
+          "countryOfBirth": null,
+          "nationality": null
+        },
+        "captain": {
+          "id": null,
+          "name": null,
+          "shirtNumber": null
+        },
+        "lineup": [],
+        "bench": []
+      },
+      "score": {
+        "winner": null,
+        "duration": "REGULAR",
+        "halfTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "fullTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "extraTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "penalties": {
+          "homeTeam": null,
+          "awayTeam": null
+        }
+      },
+      "goals": [],
+      "bookings": [],
+      "substitutions": []
+    }
+  ]
+}
+

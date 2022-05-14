@@ -4,13 +4,17 @@ export interface TeamShortResponsePayload {
 
 export type TeamFullResponsePayload = TeamFull;
 
+export interface MatchResponsePayload {
+  matches: Match[];
+}
+
 interface Area {
   id: number;
   name: string;
 }
 
 export interface TeamShort {
-  id: string;
+  id: number;
   area: Area;
   name: string;
   shortName: string;
@@ -38,4 +42,20 @@ export interface SquadMember {
   countryOfBirth: string;
   nationality: string;
   role: string;
+}
+
+export interface Match {
+  competition: {
+    id: number;
+    name: string;
+  };
+  utcDate: string;
+  homeTeam: {
+    id: number;
+    name: string;
+  };
+  awayTeam: {
+    id: number;
+    name: string;
+  };
 }
