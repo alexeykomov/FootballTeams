@@ -1,9 +1,10 @@
 import React, { useCallback, useEffect } from 'react';
-import { ActivityIndicator, FlatList, Text, View } from 'react-native';
+import { ActivityIndicator, View } from 'react-native';
 import { useDataApi } from '../../hooks/use-data-api';
 import { loadTeam } from '../../services/team';
 import { TeamListError } from '../TeamListScreen/TeamListError/TeamListError';
-import { style } from '../TeamListScreen/TeamListScreen.styles';
+import { style } from './TeamScreen.styles';
+import { TeamFull } from '../../services/types';
 
 interface TeamScreenProps {
   teamId: string;
@@ -13,7 +14,7 @@ export const TeamScreen = ({ teamId }: TeamScreenProps) => {
   const loadTeamsForId = useCallback(() => {
     return loadTeam(teamId);
   }, [teamId]);
-  const [{ data, isLoading, isError }, doFetch] = useDataApi(loadTeamsForId, null);
+  const [{ data, isLoading, isError }, doFetch] = useDataApi<TeamFull | null>(loadTeamsForId, null);
   useEffect(() => {
     if (!data && !isLoading && !isError) {
       doFetch();
@@ -24,8 +25,19 @@ export const TeamScreen = ({ teamId }: TeamScreenProps) => {
   return (
     <View style={style.root}>
       {isError && <TeamListError />}
-      {!isError && ((isLoading && data.length !== 0) || !isLoading) && <View />}
+      {!isError && ((isLoading && data === null) || !isLoading) && <View />}
       {isLoading && !data && <ActivityIndicator />}
     </View>
   );
+};
+
+TeamScreen.options = {
+  topBar: {
+    title: {
+      color: 'black',
+    },
+    background: {
+      color: 'lightblue',
+    },
+  },
 };

@@ -22,7 +22,7 @@ const dataFetchReducer = (state, action) => {
   }
 };
 
-export const useDataApi = (fetcher, initialData) => {
+export function useDataApi<T>(fetcher: () => Promise<T>, initialData: T) {
   const [fetchCount, setFetchCount] = useState(0);
 
   const [state, dispatch] = useReducer(dataFetchReducer, {
@@ -64,4 +64,4 @@ export const useDataApi = (fetcher, initialData) => {
       setFetchCount((c) => c + 1);
     },
   ];
-};
+}
