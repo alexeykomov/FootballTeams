@@ -2,7 +2,8 @@ import { AllowedCompetitions } from './constants';
 import { TeamFull, TeamFullResponsePayload, TeamShort, TeamShortResponsePayload } from './types';
 import { delay } from '../utils/delay';
 
-const TEAMS_MOCK = require('./teams.json');
+const TEAMS_MOCK = require('./teamsMock.json');
+const TEAM_MOCK = require('./teamMock.json');
 
 const BASE_URL = 'http://api.football-data.org/v2/';
 const TOKEN = '';
@@ -28,6 +29,7 @@ export const loadAllTeams = async (competitionId: AllowedCompetitions): Promise<
 export const loadTeam = async (teamId: string): Promise<TeamFull> => {
   // TODO: use in UI.
   await delay(1000);
+  return TEAM_MOCK;
   const response = await fetch(`${BASE_URL}teams/${teamId}`, {
     method: 'GET',
     headers: {

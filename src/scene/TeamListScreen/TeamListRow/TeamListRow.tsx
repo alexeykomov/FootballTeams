@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { Image, Text, TouchableHighlight, View } from 'react-native';
-import { SvgUri } from 'react-native-svg';
+import React from 'react';
+import { Text, TouchableHighlight, View } from 'react-native';
 import { ErrorBoundary } from '../../../components/ErrorBoundary';
 import { TeamShort } from '../../../services/types';
-import { CUSTOM_STYLE_FOR_FLAG } from './TeamListRow.constants';
+
 import { style } from './TeamListRow.styles';
+import { Flag } from '../../../components/Flag/Flag';
 
 interface TeamListRowProps {
   team: TeamShort;
@@ -22,15 +22,7 @@ export const TeamListRow = ({ team, onTeamPress }: TeamListRowProps) => {
     >
       <>
         <ErrorBoundary>
-          <View style={style.flagCont}>
-            <View style={[style.flagSubCont, CUSTOM_STYLE_FOR_FLAG[team.tla]]}>
-              {team.crestUrl.endsWith('.svg') ? (
-                <SvgUri height="70%" width="70%" uri={team.crestUrl} />
-              ) : (
-                <Image source={{ uri: team.crestUrl }} />
-              )}
-            </View>
-          </View>
+          <Flag flagName={team.tla} uri={team.crestUrl} />
         </ErrorBoundary>
         <View style={style.titleCont}>
           <Text>{team.name}</Text>

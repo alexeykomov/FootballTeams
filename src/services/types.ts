@@ -30,7 +30,7 @@ export interface TeamFull extends TeamShort {
   squad: SquadMember[];
 }
 
-interface SquadMember {
+export interface SquadMember {
   id: number;
   name: string;
   position: string;

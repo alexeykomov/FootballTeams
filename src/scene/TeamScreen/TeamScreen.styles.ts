@@ -5,4 +5,21 @@ export const style = StyleSheet.create({
     flex: 1,
     backgroundColor: 'violet',
   },
+  content: {
+    flex: 1,
+    paddingHorizontal: 20,
+  },
+  info: {
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    paddingVertical: 20,
+  },
+  flagCont: {
+    paddingRight: 20,
+  },
+  playersHeader: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
 });

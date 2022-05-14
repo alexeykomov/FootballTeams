@@ -1,6 +1,26 @@
 import { useEffect, useReducer, useState } from 'react';
 
-const dataFetchReducer = (state, action) => {
+interface State<T> {
+  isLoading: boolean;
+  isError: boolean;
+  data: T;
+  errorMessage: string;
+}
+
+type Action<T> =
+  | {
+      type: 'FETCH_INIT';
+    }
+  | {
+      type: 'FETCH_FAILURE';
+      payload: string;
+    }
+  | {
+      type: 'FETCH_SUCCESS';
+      payload: T;
+    };
+
+function dataFetchReducer<T>(state: State<T>, action: Action<T>) {
   switch (action.type) {
     case 'FETCH_INIT':
       return { ...state, isLoading: true, isError: false };
@@ -16,19 +36,21 @@ const dataFetchReducer = (state, action) => {
         ...state,
         isLoading: false,
         isError: true,
+        errorMessage: action.payload,
       };
     default:
       throw new Error();
   }
-};
+}
 
-export function useDataApi<T>(fetcher: () => Promise<T>, initialData: T) {
+export function useDataApi<T>(fetcher: () => Promise<T>, initialData: T): [State<T>, () => void] {
   const [fetchCount, setFetchCount] = useState(0);
 
-  const [state, dispatch] = useReducer(dataFetchReducer, {
+  const [state, dispatch] = useReducer<React.Reducer<State<T>, Action<T>>>(dataFetchReducer, {
     isLoading: false,
     isError: false,
     data: initialData,
+    errorMessage: '',
   });
 
   useEffect(() => {
@@ -44,9 +66,13 @@ export function useDataApi<T>(fetcher: () => Promise<T>, initialData: T) {
         if (!didCancel) {
           dispatch({ type: 'FETCH_SUCCESS', payload: result });
         }
-      } catch (error) {
+      } catch (e) {
+        const error = e as Error;
         if (!didCancel) {
-          dispatch({ type: 'FETCH_FAILURE' });
+          dispatch({
+            type: 'FETCH_FAILURE',
+            payload: 'message' in error ? error.message : 'Unknown error.',
+          });
         }
       }
     };

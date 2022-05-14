@@ -10,22 +10,7 @@ export const style = StyleSheet.create({
     backgroundColor: '#fff',
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderBottomColor: '#ddd',
-  },
-  flagCont: {
-    overflow: 'hidden',
-    height: 50,
-    width: 50,
-    borderRadius: 25,
-    backgroundColor: '#ddd',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginLeft: 20,
-  },
-  flagSubCont: {
-    height: 50,
-    width: 50,
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingHorizontal: 20,
   },
   titleCont: {
     paddingLeft: 20,

@@ -1,10 +1,12 @@
 import React, { useCallback, useEffect } from 'react';
-import { ActivityIndicator, View } from 'react-native';
+import { View, Text, ScrollView } from 'react-native';
 import { useDataApi } from '../../hooks/use-data-api';
 import { loadTeam } from '../../services/team';
-import { TeamListError } from '../TeamListScreen/TeamListError/TeamListError';
+import { TeamListError } from '../../components/TeamListError/TeamListError';
 import { style } from './TeamScreen.styles';
-import { TeamFull } from '../../services/types';
+import { SquadMember, TeamFull } from '../../services/types';
+import { Loader } from '../../components/Loader/Loader';
+import { Flag } from '../../components/Flag/Flag';
 
 interface TeamScreenProps {
   teamId: string;
@@ -14,7 +16,10 @@ export const TeamScreen = ({ teamId }: TeamScreenProps) => {
   const loadTeamsForId = useCallback(() => {
     return loadTeam(teamId);
   }, [teamId]);
-  const [{ data, isLoading, isError }, doFetch] = useDataApi<TeamFull | null>(loadTeamsForId, null);
+  const [{ data, isLoading, isError, errorMessage }, doFetch] = useDataApi<TeamFull | null>(
+    loadTeamsForId,
+    null,
+  );
   useEffect(() => {
     if (!data && !isLoading && !isError) {
       doFetch();
@@ -24,9 +29,27 @@ export const TeamScreen = ({ teamId }: TeamScreenProps) => {
 
   return (
     <View style={style.root}>
-      {isError && <TeamListError />}
-      {!isError && ((isLoading && data === null) || !isLoading) && <View />}
-      {isLoading && !data && <ActivityIndicator />}
+      {isError && <TeamListError errorDesc={errorMessage} onPress={doFetch} />}
+      {!isError && data !== null && (
+        <ScrollView>
+          <View style={style.content}>
+            <View style={style.info}>
+              <View style={style.flagCont}>
+                <Flag flagName={data.tla} uri={data.crestUrl} />
+              </View>
+
+              <Text>{data.name}</Text>
+            </View>
+            <Text style={style.playersHeader}>Players:</Text>
+            {data.squad.map((d: SquadMember) => (
+              <View>
+                <Text>{d.name}</Text>
+              </View>
+            ))}
+          </View>
+        </ScrollView>
+      )}
+      {isLoading && !data && <Loader />}
     </View>
   );
 };
