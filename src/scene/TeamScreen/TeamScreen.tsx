@@ -2,7 +2,7 @@ import React, { useCallback, useEffect } from 'react';
 import { View, Text, ScrollView } from 'react-native';
 import { useDataApi } from '../../hooks/use-data-api';
 import { loadTeam } from '../../services/team';
-import { TeamListError } from '../../components/TeamListError/TeamListError';
+import { InteractiveError } from '../../components/InteractiveError/InteractiveError';
 import { style } from './TeamScreen.styles';
 import { SquadMember, TeamFull } from '../../services/types';
 import { Loader } from '../../components/Loader/Loader';
@@ -30,7 +30,7 @@ export const TeamScreen = ({ teamId }: TeamScreenProps) => {
 
   return (
     <View style={style.root}>
-      {isError && <TeamListError errorDesc={errorMessage} onPress={doFetch} />}
+      {isError && <InteractiveError errorDesc={errorMessage} onPress={doFetch} />}
       {!isError && data !== null && (
         <ScrollView>
           <View style={style.content}>

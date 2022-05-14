@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 import { loadMatches } from '../../../services/team';
 import { useDataApi } from '../../../hooks/use-data-api';
 import { Match } from '../../../services/types';
-import { TeamListError } from '../../../components/TeamListError/TeamListError';
+import { InteractiveError } from '../../../components/InteractiveError/InteractiveError';
 import { Text } from 'react-native';
 import { Loader } from '../../../components/Loader/Loader';
 
@@ -31,7 +31,7 @@ export const MatchesSection = ({ teamId }: MatchesSectionProps) => {
     return <Loader />;
   }
   if (isErrorMatches || matches === null) {
-    return <TeamListError errorDesc={errorMessageMatches} onPress={doFetch} />;
+    return <InteractiveError errorDesc={errorMessageMatches} onPress={doFetch} />;
   }
   return (
     <>

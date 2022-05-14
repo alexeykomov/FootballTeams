@@ -3,7 +3,7 @@ import { ActivityIndicator, FlatList, ListRenderItemInfo, Text, View } from 'rea
 import { useDataApi } from '../../hooks/use-data-api';
 import { AllowedCompetitions } from '../../services/constants';
 import { TeamShort } from '../../services/types';
-import { TeamListError } from '../../components/TeamListError/TeamListError';
+import { InteractiveError } from '../../components/InteractiveError/InteractiveError';
 import { TeamListRow } from './TeamListRow/TeamListRow';
 import { style } from './TeamListScreen.styles';
 import { Navigation } from 'react-native-navigation';
@@ -36,7 +36,7 @@ export const TeamListScreen = ({ competitionId, componentId }: TeamListScreenPro
 
   return (
     <View style={style.root}>
-      {isError && <TeamListError onPress={doFetch} errorDesc={errorMessage} />}
+      {isError && <InteractiveError onPress={doFetch} errorDesc={errorMessage} />}
       {!isError && ((isLoading && data.length !== 0) || !isLoading) && (
         <FlatList<TeamShort>
           data={data}

@@ -7,7 +7,7 @@ interface TeamListErrorProps {
   onPress: () => void;
 }
 
-export const TeamListError = ({ errorDesc, onPress }: TeamListErrorProps) => {
+export const InteractiveError = ({ errorDesc, onPress }: TeamListErrorProps) => {
   return (
     <View style={style.root}>
       <View style={style.errorBlock}>
