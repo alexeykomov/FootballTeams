@@ -21,9 +21,7 @@ export const TeamListRow = ({ team, onTeamPress }: TeamListRowProps) => {
       underlayColor="#DDDDDD"
     >
       <>
-        <ErrorBoundary>
-          <Flag flagName={team.tla} uri={team.crestUrl} />
-        </ErrorBoundary>
+        <Flag flagName={team.tla} uri={team.crestUrl} />
         <View style={style.titleCont}>
           <Text>{team.name}</Text>
         </View>
