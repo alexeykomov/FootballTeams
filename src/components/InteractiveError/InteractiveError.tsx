@@ -1,6 +1,6 @@
 import { TouchableOpacity, View, Text } from 'react-native';
 import React from 'react';
-import { style } from './TeamListError.styles';
+import { style } from './InteractiveError.styles';
 
 interface TeamListErrorProps {
   errorDesc: string;

@@ -45,6 +45,7 @@ export interface SquadMember {
 }
 
 export interface Match {
+  id: number;
   competition: {
     id: number;
     name: string;

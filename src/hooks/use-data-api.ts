@@ -23,13 +23,14 @@ type Action<T> =
 function dataFetchReducer<T>(state: State<T>, action: Action<T>) {
   switch (action.type) {
     case 'FETCH_INIT':
-      return { ...state, isLoading: true, isError: false };
+      return { ...state, isLoading: true, isError: false, errorMessage: '' };
     case 'FETCH_SUCCESS':
       return {
         ...state,
         isLoading: false,
         isError: false,
         data: action.payload,
+        errorMessage: '',
       };
     case 'FETCH_FAILURE':
       return {
@@ -60,13 +61,13 @@ export function useDataApi<T>(fetcher: () => Promise<T>, initialData: T): [State
       dispatch({ type: 'FETCH_INIT' });
 
       try {
-        console.log('fetch: ');
         const result = await fetcher();
 
         if (!didCancel) {
           dispatch({ type: 'FETCH_SUCCESS', payload: result });
         }
       } catch (e) {
+        console.log('Error: ', e);
         const error = e as Error;
         if (!didCancel) {
           dispatch({

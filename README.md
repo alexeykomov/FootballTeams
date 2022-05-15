@@ -1,5 +1,16 @@
 # This is the test task
 
+## How to run
+1. Install [bundler](https://bundler.io/).
+2. In project folder `bundle install`.
+3. If it says *Your Ruby version is x, but your Gemfile specified 2.7.4*, then proceed to **4**, if not - skip to **6**.
+4. Install [rvm](https://rvm.io/).
+5. In project folder `rvm install 2.7.4`, go to step 2.
+6. In project folder `yarn install`.
+7. In folder `./ios` - `bundle exec pod install`.
+8. In project folder `npx react-native run-ios`, `npx react-native run-android`.
+
+## Original description
 Your task is to create a football information mobile app supporting the following requirements:
 - The first screen will show a list of football teams. When a team is selected, it will show second screen with:
   - The team’s logo.

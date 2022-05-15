@@ -1,15 +1,13 @@
 import React from 'react';
-import { SafeAreaView } from 'react-native';
 import { TeamListScreen } from './src/scene/TeamListScreen/TeamListScreen';
 import { AllowedCompetitions } from './src/services/constants';
-import { style } from './App.styles';
 
 interface AppProps {
   componentId: string;
 }
 
 export default function App({ componentId }: AppProps) {
-  return <TeamListScreen competitionId={AllowedCompetitions.WC} componentId={componentId} />;
+  return <TeamListScreen competitionId={AllowedCompetitions.CL} componentId={componentId} />;
 }
 
 App.options = {

@@ -13,14 +13,14 @@ const TEAMS_MOCK = require('./teamsMock.json');
 const TEAM_MOCK = require('./teamMock.json');
 const MATCHES_MOCK = require('./matches.json');
 
-const BASE_URL = 'http://api.football-data.org/v2/';
+const BASE_URL = 'https://api.football-data.org/v2/';
 const TOKEN = '';
 
 export const loadAllTeams = async (competitionId: AllowedCompetitions): Promise<TeamShort[]> => {
   // TODO: use in UI.
   await delay(1000);
   const teams = TEAMS_MOCK;
-  return teams.teams;
+  // return teams.teams;
 
   const response = await fetch(`${BASE_URL}competitions/${competitionId}/teams`, {
     method: 'GET',
@@ -28,16 +28,16 @@ export const loadAllTeams = async (competitionId: AllowedCompetitions): Promise<
       'X-Auth-Token': TOKEN,
     },
   });
-  console.log('response.status: ', response.status);
-  console.log('response.statusText: ', response.statusText);
   const result = (await response.json()) as TeamShortResponsePayload;
+
   return result.teams;
 };
 
 export const loadTeam = async (teamId: number): Promise<TeamFull> => {
+  console.log('teamId: ', teamId);
   // TODO: use in UI.
   await delay(1000);
-  return TEAM_MOCK;
+  // return TEAM_MOCK;
   const response = await fetch(`${BASE_URL}teams/${teamId}`, {
     method: 'GET',
     headers: {
@@ -51,14 +51,20 @@ export const loadTeam = async (teamId: number): Promise<TeamFull> => {
 export const loadMatches = async (teamId: number): Promise<Match[]> => {
   // TODO: use in UI.
   await delay(1000);
-  return MATCHES_MOCK;
-  const dateFrom = new Date().toISOString().slice(0, 10);
-  const response = await fetch(`${BASE_URL}teams/${teamId}/matches&dateFrom${dateFrom}`, {
-    method: 'GET',
-    headers: {
-      'X-Auth-Token': TOKEN,
+
+  const now = new Date();
+  const dateFrom = now.toISOString().slice(0, 10);
+  const dateTo = new Date(now.getTime() + 31540000000).toISOString().slice(0, 10);
+  const response = await fetch(
+    `${BASE_URL}teams/${teamId}/matches?dateFrom=${dateFrom}&dateTo=${dateTo}`,
+    {
+      method: 'GET',
+      headers: {
+        'X-Auth-Token': TOKEN,
+      },
     },
-  });
+  );
   const result = (await response.json()) as MatchResponsePayload;
+  console.log('result: ', result);
   return result.matches;
 };

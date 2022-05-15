@@ -29,11 +29,6 @@ export const TeamListScreen = ({ competitionId, componentId }: TeamListScreenPro
       doFetch();
     }
   });
-  console.log('render: ');
-  console.log('data: ', data);
-  console.log('isError: ', isError);
-  console.log('errorMessage: ', errorMessage);
-
   return (
     <View style={style.root}>
       {isError && <InteractiveError onPress={doFetch} errorDesc={errorMessage} />}

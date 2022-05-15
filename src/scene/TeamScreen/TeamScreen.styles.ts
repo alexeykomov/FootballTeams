@@ -3,7 +3,6 @@ import { StyleSheet } from 'react-native';
 export const style = StyleSheet.create({
   root: {
     flex: 1,
-    backgroundColor: 'violet',
   },
   content: {
     flex: 1,
@@ -18,8 +17,28 @@ export const style = StyleSheet.create({
   flagCont: {
     paddingRight: 20,
   },
-  playersHeader: {
+  headerTeam: {
     fontSize: 20,
     fontWeight: 'bold',
+  },
+  headerPlayers: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    paddingTop: 10,
+    paddingBottom: 20,
+  },
+  headerMatches: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    paddingTop: 30,
+    paddingBottom: 20,
+  },
+  playerEntry: {
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomColor: '#ddd',
+    paddingVertical: 10,
+  },
+  playerText: {
+    fontSize: 16,
   },
 });

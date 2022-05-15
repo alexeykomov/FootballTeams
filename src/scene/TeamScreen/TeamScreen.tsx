@@ -26,7 +26,7 @@ export const TeamScreen = ({ teamId }: TeamScreenProps) => {
       doFetch();
     }
   });
-  console.log('render: ');
+  console.log('data: ', data);
 
   return (
     <View style={style.root}>
@@ -38,14 +38,17 @@ export const TeamScreen = ({ teamId }: TeamScreenProps) => {
               <View style={style.flagCont}>
                 <Flag flagName={data.tla} uri={data.crestUrl} />
               </View>
-              <Text>{data.name}</Text>
+              <Text style={style.headerTeam}>{data.name}</Text>
             </View>
-            <Text style={style.playersHeader}>Players:</Text>
+            <Text style={style.headerPlayers}>Players</Text>
             {data.squad.map((d: SquadMember) => (
-              <Text>{d.name}</Text>
+              <View style={style.playerEntry} key={d.id}>
+                <Text style={style.playerText}>{d.name}</Text>
+              </View>
             ))}
+            <Text style={style.headerMatches}>Matches</Text>
+            <MatchesSection teamId={teamId} />
           </View>
-          <MatchesSection teamId={teamId} />
         </ScrollView>
       )}
       {isLoading && !data && <Loader />}

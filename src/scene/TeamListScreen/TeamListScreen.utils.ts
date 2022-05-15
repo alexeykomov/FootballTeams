@@ -7,6 +7,9 @@ export const createOnTeamPress = (componentId: string, dataItem: ListRenderItemI
     Navigation.push(componentId, {
       component: {
         name: 'TeamScreen',
+        passProps: {
+          teamId: dataItem.item.id,
+        },
         options: {
           topBar: {
             title: {

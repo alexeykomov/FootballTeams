@@ -16,7 +16,7 @@ export const style = StyleSheet.create({
     borderRadius: 10,
   },
   message: {
-    color: '#red',
+    color: 'red',
     paddingBottom: 10,
   },
   button: {
