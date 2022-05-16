@@ -8,14 +8,10 @@ import {
   TeamShort,
   TeamShortResponsePayload,
 } from './types';
-import { delay } from '../utils/delay';
-
-const TEAMS_MOCK = require('./teamsMock.json');
-const TEAM_MOCK = require('./teamMock.json');
-const MATCHES_MOCK = require('./matches.json');
+import config from 'react-native-ultimate-config';
 
 const BASE_URL = 'https://api.football-data.org/v2/';
-const TOKEN = '';
+const AUTH_TOKEN = config.AUTH_TOKEN;
 
 const produceErrorIfNeeded = (result: Object) => {
   if ('errorCode' in result) {
@@ -25,15 +21,10 @@ const produceErrorIfNeeded = (result: Object) => {
 };
 
 export const loadAllTeams = async (competitionId: AllowedCompetitions): Promise<TeamShort[]> => {
-  // TODO: use in UI.
-  await delay(1000);
-  const teams = TEAMS_MOCK;
-  // return teams.teams;
-
   const response = await fetch(`${BASE_URL}competitions/${competitionId}/teams`, {
     method: 'GET',
     headers: {
-      'X-Auth-Token': TOKEN,
+      'X-Auth-Token': AUTH_TOKEN,
     },
   });
   const result = await response.json();
@@ -44,14 +35,10 @@ export const loadAllTeams = async (competitionId: AllowedCompetitions): Promise<
 };
 
 export const loadTeam = async (teamId: number): Promise<TeamFull> => {
-  console.log('teamId: ', teamId);
-  // TODO: use in UI.
-  await delay(1000);
-  // return TEAM_MOCK;
   const response = await fetch(`${BASE_URL}teams/${teamId}`, {
     method: 'GET',
     headers: {
-      'X-Auth-Token': TOKEN,
+      'X-Auth-Token': AUTH_TOKEN,
     },
   });
   const result = await response.json();
@@ -63,9 +50,6 @@ export const loadTeam = async (teamId: number): Promise<TeamFull> => {
 const YEAR_IN_MILLIS = 31540000000;
 
 export const loadMatches = async (teamId: number): Promise<Match[]> => {
-  // TODO: use in UI.
-  await delay(1000);
-
   const now = new Date();
   const dateFrom = now.toISOString().slice(0, 10);
   const dateTo = new Date(now.getTime() + YEAR_IN_MILLIS).toISOString().slice(0, 10);
@@ -74,7 +58,7 @@ export const loadMatches = async (teamId: number): Promise<Match[]> => {
     {
       method: 'GET',
       headers: {
-        'X-Auth-Token': TOKEN,
+        'X-Auth-Token': AUTH_TOKEN,
       },
     },
   );

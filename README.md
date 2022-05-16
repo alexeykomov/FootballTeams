@@ -1,6 +1,13 @@
 # This is the test task
 
+## Warnings
+1. Some svgs aren't valid - so you'll see render errors. Don't worry, component is enclosed in `<ErrorBoundary />`.
+
 ## How to run
+
+### Install API package
+
+### Set up project
 1. Install [bundler](https://bundler.io/).
 2. In project folder `bundle install`.
 3. If it says *Your Ruby version is x, but your Gemfile specified 2.7.4*, then proceed to **4**, if not - skip to **6**.
@@ -8,7 +15,10 @@
 5. In project folder `rvm install 2.7.4`, go to step 2.
 6. In project folder `yarn install`.
 7. In folder `./ios` - `bundle exec pod install`.
-8. In project folder `npx react-native run-ios`, `npx react-native run-android`.
+8. Get your token from https://www.football-data.org/client/home. Sign-up if needed.
+9. Create `.env` file with token: `cp env.example .env`. Paste token from **8**.
+10. Generate config - in project folder `yarn rnuc .env`.
+11. In project folder `npx react-native run-ios`, `npx react-native run-android`.
 
 ## Original description
 Your task is to create a football information mobile app supporting the following requirements:

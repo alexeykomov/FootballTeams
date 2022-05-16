@@ -43,7 +43,7 @@ export const TeamScreen = ({ teamId }: TeamScreenProps) => {
   return (
     <View style={style.root}>
       {isError && <InteractiveError errorDesc={errorMessage} onPress={doFetch} />}
-      {!isError && data !== null && (
+      {!isError && !isLoading && data !== null && (
         <ScrollView>
           <View style={style.content}>
             <View style={style.info}>
@@ -59,7 +59,7 @@ export const TeamScreen = ({ teamId }: TeamScreenProps) => {
           </View>
         </ScrollView>
       )}
-      {isLoading && !data && <Loader />}
+      {isLoading && (!data || data.squad.length === 0) && <Loader />}
     </View>
   );
 };

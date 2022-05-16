@@ -1,6 +1,5 @@
 import React from 'react';
 import { Text, TouchableHighlight, View } from 'react-native';
-import { ErrorBoundary } from '../../../components/ErrorBoundary';
 import { TeamShort } from '../../../services/types';
 
 import { style } from './TeamListRow.styles';
