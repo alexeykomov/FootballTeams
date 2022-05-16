@@ -5,7 +5,7 @@ export const style = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 50,
+    paddingHorizontal: 50,
   },
   errorBlock: {
     padding: 20,
@@ -15,9 +15,9 @@ export const style = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 10,
+    flex: 1,
   },
   message: {
-    color: 'red',
     paddingBottom: 10,
   },
   button: {

@@ -1,3 +1,8 @@
+export interface ErrorPayload {
+  errorCode: number;
+  message: string;
+}
+
 export interface TeamShortResponsePayload {
   teams: TeamShort[];
 }

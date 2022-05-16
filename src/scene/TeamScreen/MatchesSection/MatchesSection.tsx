@@ -7,6 +7,7 @@ import { Text, View } from 'react-native';
 import { Loader } from '../../../components/Loader/Loader';
 import { getNameOfRivalTeam } from './MatchesSection.utils';
 import { style } from './MatchesSection.styles';
+import { NoData } from '../../../components/NoData/NoData';
 
 interface MatchesSectionProps {
   teamId: number;
@@ -25,6 +26,9 @@ export const MatchesSection = ({ teamId }: MatchesSectionProps) => {
   }
   if (isError || !data) {
     return <InteractiveError errorDesc={errorMessage} onPress={doFetch} />;
+  }
+  if (data.length === 0) {
+    return <NoData onPress={doFetch} desc="No upcoming matches for team" />;
   }
   return (
     <>

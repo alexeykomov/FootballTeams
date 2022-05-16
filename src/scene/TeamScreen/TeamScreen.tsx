@@ -8,6 +8,7 @@ import { SquadMember, TeamFull } from '../../services/types';
 import { Loader } from '../../components/Loader/Loader';
 import { Flag } from '../../components/Flag/Flag';
 import { MatchesSection } from './MatchesSection/MatchesSection';
+import { NoData } from '../../components/NoData/NoData';
 
 interface TeamScreenProps {
   teamId: number;
@@ -28,6 +29,17 @@ export const TeamScreen = ({ teamId }: TeamScreenProps) => {
   });
   console.log('data: ', data);
 
+  const renderPlayers = () =>
+    data && data.squad.length !== 0 ? (
+      data.squad.map((d: SquadMember) => (
+        <View style={style.playerEntry} key={d.id}>
+          <Text style={style.playerText}>{d.name}</Text>
+        </View>
+      ))
+    ) : (
+      <NoData onPress={doFetch} desc="No players on this team" />
+    );
+
   return (
     <View style={style.root}>
       {isError && <InteractiveError errorDesc={errorMessage} onPress={doFetch} />}
@@ -41,11 +53,7 @@ export const TeamScreen = ({ teamId }: TeamScreenProps) => {
               <Text style={style.headerTeam}>{data.name}</Text>
             </View>
             <Text style={style.headerPlayers}>Players</Text>
-            {data.squad.map((d: SquadMember) => (
-              <View style={style.playerEntry} key={d.id}>
-                <Text style={style.playerText}>{d.name}</Text>
-              </View>
-            ))}
+            {renderPlayers()}
             <Text style={style.headerMatches}>Matches</Text>
             <MatchesSection teamId={teamId} />
           </View>

@@ -1,5 +1,6 @@
 import { AllowedCompetitions } from './constants';
 import {
+  ErrorPayload,
   Match,
   MatchResponsePayload,
   TeamFull,
@@ -16,6 +17,13 @@ const MATCHES_MOCK = require('./matches.json');
 const BASE_URL = 'https://api.football-data.org/v2/';
 const TOKEN = '';
 
+const produceErrorIfNeeded = (result: Object) => {
+  if ('errorCode' in result) {
+    const err = result as ErrorPayload;
+    throw new Error(`API error. ${err.message}`);
+  }
+};
+
 export const loadAllTeams = async (competitionId: AllowedCompetitions): Promise<TeamShort[]> => {
   // TODO: use in UI.
   await delay(1000);
@@ -28,9 +36,11 @@ export const loadAllTeams = async (competitionId: AllowedCompetitions): Promise<
       'X-Auth-Token': TOKEN,
     },
   });
-  const result = (await response.json()) as TeamShortResponsePayload;
-
-  return result.teams;
+  const result = await response.json();
+  console.log('result: ', result);
+  produceErrorIfNeeded(result);
+  const validResult = result as TeamShortResponsePayload;
+  return validResult.teams;
 };
 
 export const loadTeam = async (teamId: number): Promise<TeamFull> => {
@@ -44,9 +54,13 @@ export const loadTeam = async (teamId: number): Promise<TeamFull> => {
       'X-Auth-Token': TOKEN,
     },
   });
-  const result = (await response.json()) as TeamFullResponsePayload;
-  return result;
+  const result = await response.json();
+  produceErrorIfNeeded(result);
+  const validResult = result as TeamFullResponsePayload;
+  return validResult;
 };
+
+const YEAR_IN_MILLIS = 31540000000;
 
 export const loadMatches = async (teamId: number): Promise<Match[]> => {
   // TODO: use in UI.
@@ -54,7 +68,7 @@ export const loadMatches = async (teamId: number): Promise<Match[]> => {
 
   const now = new Date();
   const dateFrom = now.toISOString().slice(0, 10);
-  const dateTo = new Date(now.getTime() + 31540000000).toISOString().slice(0, 10);
+  const dateTo = new Date(now.getTime() + YEAR_IN_MILLIS).toISOString().slice(0, 10);
   const response = await fetch(
     `${BASE_URL}teams/${teamId}/matches?dateFrom=${dateFrom}&dateTo=${dateTo}`,
     {
@@ -65,6 +79,7 @@ export const loadMatches = async (teamId: number): Promise<Match[]> => {
     },
   );
   const result = (await response.json()) as MatchResponsePayload;
-  console.log('result: ', result);
-  return result.matches;
+  produceErrorIfNeeded(result);
+  const validResult = result as MatchResponsePayload;
+  return validResult.matches;
 };

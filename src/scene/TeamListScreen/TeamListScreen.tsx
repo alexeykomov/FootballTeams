@@ -10,6 +10,7 @@ import { Navigation } from 'react-native-navigation';
 import { loadAllTeams } from '../../services/team';
 import { createOnTeamPress } from './TeamListScreen.utils';
 import { Loader } from '../../components/Loader/Loader';
+import { NoData } from '../../components/NoData/NoData';
 
 interface TeamListScreenProps {
   competitionId: AllowedCompetitions;
@@ -43,7 +44,12 @@ export const TeamListScreen = ({ competitionId, componentId }: TeamListScreenPro
           )}
           onRefresh={doFetch}
           refreshing={isLoading}
-          ListEmptyComponent={() => <Text>Empty list</Text>}
+          ListEmptyComponent={() => (
+            <NoData
+              onPress={doFetch}
+              desc={`No matches are present for competition ${competitionId}`}
+            />
+          )}
         />
       )}
       {isLoading && data.length === 0 && <Loader />}
