@@ -1,6 +1,6 @@
 import React from 'react';
 import { TeamListScreen } from './src/scene/TeamListScreen/TeamListScreen';
-import { AllowedCompetitions } from './src/services/constants';
+import { AllowedCompetitions } from 'test-task-football-teams-api/lib/constants';
 
 interface AppProps {
   componentId: string;
