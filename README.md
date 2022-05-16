@@ -16,9 +16,8 @@
 6. In project folder `yarn install`.
 7. In folder `./ios` - `bundle exec pod install`.
 8. Get your token from https://www.football-data.org/client/home. Sign-up if needed.
-9. Create `.env` file with token: `cp env.example .env`. Paste token from **8**.
-10. Generate config - in project folder `yarn rnuc .env`.
-11. In project folder `npx react-native run-ios`, `npx react-native run-android`.
+9. Paste token in `AUTH_TOKEN` variable in `./src/config.ts`.
+10. In project folder `npx react-native run-ios`, `npx react-native run-android`.
 
 ## Original description
 Your task is to create a football information mobile app supporting the following requirements:
