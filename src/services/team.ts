@@ -11,7 +11,6 @@ import {
 import config from 'react-native-ultimate-config';
 
 const BASE_URL = 'https://api.football-data.org/v2/';
-const AUTH_TOKEN = config.AUTH_TOKEN;
 
 const produceErrorIfNeeded = (result: Object) => {
   if ('errorCode' in result) {
@@ -24,7 +23,7 @@ export const loadAllTeams = async (competitionId: AllowedCompetitions): Promise<
   const response = await fetch(`${BASE_URL}competitions/${competitionId}/teams`, {
     method: 'GET',
     headers: {
-      'X-Auth-Token': AUTH_TOKEN,
+      'X-Auth-Token': config.AUTH_TOKEN,
     },
   });
   const result = await response.json();
@@ -38,7 +37,7 @@ export const loadTeam = async (teamId: number): Promise<TeamFull> => {
   const response = await fetch(`${BASE_URL}teams/${teamId}`, {
     method: 'GET',
     headers: {
-      'X-Auth-Token': AUTH_TOKEN,
+      'X-Auth-Token': config.AUTH_TOKEN,
     },
   });
   const result = await response.json();
@@ -58,7 +57,7 @@ export const loadMatches = async (teamId: number): Promise<Match[]> => {
     {
       method: 'GET',
       headers: {
-        'X-Auth-Token': AUTH_TOKEN,
+        'X-Auth-Token': config.AUTH_TOKEN,
       },
     },
   );
