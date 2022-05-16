@@ -1,9 +1,8 @@
 import React from 'react';
 import { Text, TouchableHighlight, View } from 'react-native';
-import { TeamShort } from '../../../services/types';
-
 import { style } from './TeamListRow.styles';
 import { Flag } from '../../../components/Flag/Flag';
+import { TeamShort } from 'test-task-football-teams-api/lib/types';
 
 interface TeamListRowProps {
   team: TeamShort;

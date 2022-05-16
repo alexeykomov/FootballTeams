@@ -1,16 +1,16 @@
 import React, { useCallback, useEffect } from 'react';
-import { ActivityIndicator, FlatList, ListRenderItemInfo, Text, View } from 'react-native';
+import { FlatList, View } from 'react-native';
 import { useDataApi } from '../../hooks/use-data-api';
-import { AllowedCompetitions } from '../../services/constants';
-import { TeamShort } from '../../services/types';
 import { InteractiveError } from '../../components/InteractiveError/InteractiveError';
 import { TeamListRow } from './TeamListRow/TeamListRow';
 import { style } from './TeamListScreen.styles';
-import { Navigation } from 'react-native-navigation';
-import { loadAllTeams } from '../../services/team';
 import { createOnTeamPress } from './TeamListScreen.utils';
 import { Loader } from '../../components/Loader/Loader';
 import { NoData } from '../../components/NoData/NoData';
+import API from 'test-task-football-teams-api';
+import { AUTH_TOKEN } from '../../config';
+import { AllowedCompetitions } from 'test-task-football-teams-api/lib/constants';
+import { TeamShort } from 'test-task-football-teams-api/lib/types';
 
 interface TeamListScreenProps {
   competitionId: AllowedCompetitions;
@@ -19,7 +19,7 @@ interface TeamListScreenProps {
 
 export const TeamListScreen = ({ competitionId, componentId }: TeamListScreenProps) => {
   const loadAllTeamsForCompetition = useCallback(() => {
-    return loadAllTeams(competitionId);
+    return API.loadAllTeams(AUTH_TOKEN, competitionId);
   }, [competitionId]);
   const [{ data, isLoading, isError, errorMessage }, doFetch] = useDataApi<TeamShort[]>(
     loadAllTeamsForCompetition,

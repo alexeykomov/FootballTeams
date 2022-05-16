@@ -1,14 +1,15 @@
 import React, { useCallback, useEffect } from 'react';
 import { View, Text, ScrollView } from 'react-native';
 import { useDataApi } from '../../hooks/use-data-api';
-import { loadTeam } from '../../services/team';
 import { InteractiveError } from '../../components/InteractiveError/InteractiveError';
 import { style } from './TeamScreen.styles';
-import { SquadMember, TeamFull } from '../../services/types';
 import { Loader } from '../../components/Loader/Loader';
 import { Flag } from '../../components/Flag/Flag';
 import { MatchesSection } from './MatchesSection/MatchesSection';
 import { NoData } from '../../components/NoData/NoData';
+import API from 'test-task-football-teams-api';
+import { AUTH_TOKEN } from '../../config';
+import { SquadMember, TeamFull } from 'test-task-football-teams-api/lib/types';
 
 interface TeamScreenProps {
   teamId: number;
@@ -16,7 +17,7 @@ interface TeamScreenProps {
 
 export const TeamScreen = ({ teamId }: TeamScreenProps) => {
   const loadTeamsForId = useCallback(() => {
-    return loadTeam(teamId);
+    return API.loadTeam(AUTH_TOKEN, teamId);
   }, [teamId]);
   const [{ data, isLoading, isError, errorMessage }, doFetch] = useDataApi<TeamFull | null>(
     loadTeamsForId,

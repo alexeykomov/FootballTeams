@@ -1,6 +1,6 @@
 import { ListRenderItemInfo } from 'react-native';
-import { TeamShort } from '../../services/types';
 import { Navigation } from 'react-native-navigation';
+import { TeamShort } from 'test-task-football-teams-api/lib/types';
 
 export const createOnTeamPress = (componentId: string, dataItem: ListRenderItemInfo<TeamShort>) => {
   return () => {

@@ -1,13 +1,14 @@
 import React, { useCallback } from 'react';
-import { loadMatches } from '../../../services/team';
 import { useDataApi } from '../../../hooks/use-data-api';
-import { Match } from '../../../services/types';
 import { InteractiveError } from '../../../components/InteractiveError/InteractiveError';
 import { Text, View } from 'react-native';
 import { Loader } from '../../../components/Loader/Loader';
 import { getNameOfRivalTeam } from './MatchesSection.utils';
 import { style } from './MatchesSection.styles';
 import { NoData } from '../../../components/NoData/NoData';
+import API from 'test-task-football-teams-api';
+import { AUTH_TOKEN } from '../../../config';
+import { Match } from 'test-task-football-teams-api/lib/types';
 
 interface MatchesSectionProps {
   teamId: number;
@@ -15,7 +16,7 @@ interface MatchesSectionProps {
 
 export const MatchesSection = ({ teamId }: MatchesSectionProps) => {
   const loadMatchesForId = useCallback(() => {
-    return loadMatches(teamId);
+    return API.loadMatches(AUTH_TOKEN, teamId);
   }, [teamId]);
   const [{ data, isLoading, isError, errorMessage }, doFetch] = useDataApi<Match[] | null>(
     loadMatchesForId,
